@@ -3,12 +3,20 @@
 <html>
     <head>
         <title>Centurion Robotics 22689</title>
+        <link rel = 'stylesheet' href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css'>
         <style>
             @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
             body {
                 font-family: 'League Spartan', sans-serif;
                 margin: 0;
                 line-height: 1.3;
+                overflow-x: hidden;
+                background-color: black;
+                color: ghostwhite;
+            } header {
+                background-color: #F9BB17;
+                color: black;
+                padding: 40px 50px 40px 50px;
             } nav {
                 text-align: center;
                 margin-top: 20px;
@@ -28,24 +36,24 @@
                 color: #CC5500;
                 transform: scale(1.15);
                 letter-spacing: 1px;
-            }
-
-            header {
-                background-color: #F9BB17;
-                color: black;
-                padding: 40px 100px 40px 100px;
             } main {
                 background-color: black;
                 color: ghostwhite;
                 padding: 40px 80px 40px 80px;
-            } footer {
-                background-color: #F9BB17;
-                color: black;
-                padding: 10px 100px 10px 100px;
             } hr {
                 border: none;
-                height: 2px;
+                height: 3px;
                 background-color: ghostwhite;
+                margin: 0px 0;
+            } footer {
+                background-color: black;
+                color: ghostwhite;
+                padding: 10px 100px 10px 100px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            } footer p {
+                line-height: 1.2;
                 margin: 2px 0;
             }
 
@@ -53,9 +61,82 @@
                 display: flex;
                 align-items: center;
                 gap: 40px;
+                padding-bottom: 72px;
             } .about-section img {
                 width: 500px;
                 align-items: center;
+            } .section-divider {
+                height: 60px;
+                background: repeating-linear-gradient(
+                    135deg,
+                    #F9BB17 0px 10px,
+                    black 10px 20px
+                );
+                margin: 0 -80px;
+            } .FTC1-section {
+                padding-top: 40px;
+                padding-bottom: 40px;
+            } .FTC2-section {
+                padding-top: 20px;
+                padding-bottom: 20px;
+            } .footer-left, .footer-right {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 10px 0px;
+            } .footer-left img {
+                width: 100px;
+                padding: 0px 12px 10px 12px;
+            } .footer-right a {
+                text-align: right;
+                font-size: 15px;
+                font-weight: 300;
+                vertical-align: middle;
+                color: ghostwhite;
+                text-decoration: none;
+                transition: 0.2s all ease-in-out;
+                align-items: flex-start;
+            } .footer-right a:hover {
+                color: #CC5500;
+            }
+
+                        /* ------------------------------ */
+            /* RESPONSIVE LAYOUT (MOBILE)     */
+            /* ------------------------------ */
+            @media screen and (max-width: 768px) {
+                header {
+                    padding: 25px 20px;
+                } nav a {
+                    display: block;
+                    margin: 10px 0;
+                    font-size: 20px;
+                } h1 {
+                    font-size: 48px !important;
+                } main {
+                    padding: 20px 25px;
+                } .about-section {
+                    flex-direction: column;
+                    text-align: center;
+                    gap: 20px;
+                } .about-section img {
+                    width: 90%;
+                    max-width: 350px;
+                } .section-divider {
+                    margin: 0 -25px;
+                    height: 40px;
+                } .FTC1-section, .FTC2-section {
+                    padding: 20px 0;
+                } footer {
+                    flex-direction: column;
+                    text-align: center;
+                    padding: 20px;
+                    gap: 10px;
+                } .footer-left img {
+                    width: 80px;
+                } .footer-right a {
+                    text-align: center;
+                    font-size: 14px;
+                }
             }
         </style>
     </head>
@@ -84,33 +165,37 @@
                 </div>
                 <img src = 'images\team_photo_qualifier_jan_2026.jpg' alt = 'Buffalo Jump Qualifier team photo. Taken January 31, 2026 at North Trail High School, Calgary, AB.'>
             </div>
-            <br><br><br>
+            
+            <div class = 'section-divider'></div>
             <div class = 'FTC1-section'>
                 <div class = 'FTC1-text'>
                     <h2 style = 'font-size: 36px; font-weight: 600;'>What is FIRST Tech Challenge?</h2>
-                    <ul style = 'font-size: 18px; font-weight: 400;'>
-                        <li>[FIRST is an international robotics and STEM organization</li>
-                        <li>FIRST is an acronym: “For Inspiration and Recognition of Science and Technology”</li>
-                        <li>International Education Organization (~30,000 participants)</li>
-                        <li>Founded in 1989 to encourage STEM and teamwork through robotics</li>
-                        <li>Aims to Spark a lifelong interest in learning</li>
-                        <li>Participants from 100+ countries]</li>
-                    </ul>
+                    <p style = 'font-size: 18px; font-weight: 400;'>It's way more than building robots. FIRST Tech Challenge teams (up to 15 team members, grades 7-12) are challenged to design, build, program, and operate robots to compete in a head-to-head challenge in an alliance format.</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>Guided by adult coaches and mentors, students develop STEM skills and practice engineering principles, while realizing the value of hard work, innovation, and working as a team.</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>The robot kit is reusable from year to year and can be coded using a variety of levels of graphical and Java-based programming.</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>Teams design and build robots, raise funds, design and market their team brand, and do community outreach to earn specific awards.</p>
+                    <p style = 'font-size: 18px; font-weight: 400;'>Each season concludes with regional championship events and an exciting FIRST Championship!</p>
                 </div>
             </div>
-            <br><br><br>
+            
             <div class = 'FTC2-section'>
                 <div class = 'FTC2-text'>
                     <h2 style = 'font-size: 36px; font-weight: 600;'>Why is FIRST Tech Challenge important?</h2>
                     <ul style = 'font-size: 18px; font-weight: 400;'>
-                        <li>[FIRST Alumni are:</li>
+                        <h3 style = 'font-size: 22px; font-weight: 500; color: #E5D1B1;'>Students get to:</h3>
                         <ul>
-                            <li><b>89% more likely</b> to major in a STEM field</li>
-                            <li><b>68% more likely</b> to major in engineering or computer science</li>
+                            <li>Learn from professional engineers</li>
+                            <li>Build and compete with a robot of their own design</li>
+                            <li>Learn and use sophisticated software and hardware</li>
+                            <li>Compete and cooperate in alliances and tournaments</li>
+                            <li>Earn a place in the World Championship</li>
+                            <li>Qualify for over $12 million in college scholarships</li>
                         </ul>
-                        <li>FIRST Students have been shown to do well in STEM related subjects in school</li>
-                        <li>FIRST encourages students to continue learning outside of school and search for opportunities</li>
-                        <li>There are $80 Million worth of scholarships available, provided by 200 different companies and organizations]</li>
+                        <h3 style = 'font-size: 22px; font-weight: 500; color: #E5D1B1;'>FIRST Alumni are:</h3>
+                        <ul>
+                            <li><b>2.0× more likely</b> to declare a major in Engineering</li>
+                            <li><b>2.1× more likely</b> to declare a major in Computer Science</li>
+                        </ul>
                     </ul>
                 </div>
             </div>
@@ -118,7 +203,17 @@
         
         <hr>
         <footer>
-            <p style = 'font-size: 12px; font-weight: 100;'>© 2026 Centurion Robotics</p>
+            <div class = 'footer-left'>
+                <img src = 'images\logo.png'>
+                <p style = 'font-size: 12px; font-weight: 200;'>© 2026 Centurion Robotics</p>
+            </div>
+            <div class = 'footer-right'>
+                <a href = 'mailto:centurionrobots@gmail.com'><i class = 'fa-solid fa-envelope'></i><span> centurionrobots@gmail.com</span></a>
+                <a href = 'https://youtube.com/@centurionrobotics'><i class = 'fa-brands fa-youtube'></i><span> @centurionrobotics</span></a>
+                <a href = 'https://instagram.com/ftc_22689/'><i class = 'fa-brands fa-instagram'></i><span> @ftc_22689</span></a>
+                <a href = 'https://github.com/Centurion-Robotics'><i class = 'fa-brands fa-github'></i><span> Centurion-Robotics</span></a>
+                <a href = 'https://www.google.com/maps/place/Fort+Richmond/@49.7911343,-97.1530842,18z/data=!4m6!3m5!1s0x52c1df66937ed22f:0x70d1e65e24b8a3f4!8m2!3d49.7912828!4d-97.1527827!16s%2Fm%2F026sbvv?entry=ttu&g_ep=EgoyMDI2MDIwMy4wIKXMDSoASAFQAw%3D%3D'><i class = 'fa-solid fa-location-dot'></i> 99 Killarney Ave, Winnipeg, MB R3T 3B3</a>
+            </div>
         </footer>
     </body>
 </html>
